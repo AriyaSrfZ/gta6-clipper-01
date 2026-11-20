@@ -66,6 +66,29 @@ there (see the submitted transcripts):
 The middle line is the bounty's required line, word for word; the
 `makefun-...` line is this account's play code for the bounty.
 
+## How it works
+
+The whole entry hangs on one Short and the small program that points the
+gate at it:
+
+1. **The clip** — a 12-second vertical cut of the dirt-bike jump from
+   Rockstar's GTA 6 Launch Trailer (48.0–51.0s), rendered blur-fill so
+   the stunt is never cropped, with a slow-motion replay and a
+   make.fun pitch card at the end.
+2. **The Short** — published publicly as
+   https://youtube.com/shorts/JlQXR_fCUek on the Arya CS channel, with
+   the bounty's line and the play code in its description. That URL is
+   the only thing the gate scores: the house counts the Short's real
+   YouTube views at the deadline.
+3. **The play code** — `makefun-violin-snowdrop-winter`, listed in the
+   Short's description and in the "Description used on YouTube" section
+   below, ties the video to this account's entry.
+4. **The program** — `main.ts` (see "The program") reads `VIDEO.json`
+   from the repo root, checks it parses and carries a URL, and hands it
+   to the gate at `/output/VIDEO.json`.
+
+Nothing else in this repo is scored; the clip's views are the entry.
+
 ## The program
 
 `main.ts` (Node 22, standard library only) copies `VIDEO.json` from the
